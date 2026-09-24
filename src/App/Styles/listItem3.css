@@ -1,0 +1,65 @@
+/* ===== ITEMS LIST ===== */
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  overflow-y: hidden;
+}
+
+/* ROW */
+
+.list-row {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  background: #111827;
+
+  border: 1px solid rgba(65, 184, 131, 0.16);
+
+  border-radius: 18px;
+
+  padding: 16px 18px;
+
+  transition: all 0.22s ease;
+
+  cursor: pointer;
+}
+
+.list-row:hover {
+  transform: translateX(6px);
+
+  border-color: #41b883;
+
+  box-shadow: 0 0 16px rgba(65, 184, 131, 0.18);
+}
+
+.list-row.selected {
+  border-color: #41b883;
+
+  background: rgba(65, 184, 131, 0.08);
+
+  box-shadow: 0 0 20px rgba(65, 184, 131, 0.25);
+}
+
+/* ICON */
+
+.react-list-icon {
+  color: #41b883;
+}
+
+/* BADGE */
+
+.selected-badge {
+  background: rgba(65, 184, 131, 0.15);
+
+  border: 1px solid rgba(65, 184, 131, 0.35);
+
+  color: #41b883;
+
+  border-radius: 999px;
+}

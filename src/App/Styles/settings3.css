@@ -1,0 +1,48 @@
+/* ===== SETTINGS ===== */
+
+.settings-box {
+  background: #111827;
+
+  border: 1px solid rgba(65, 184, 131, 0.18);
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  box-shadow: 0 0 20px rgba(65, 184, 131, 0.08);
+}
+
+.settings-header h3 {
+  color: #41b883;
+}
+
+.settings-item {
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 14px;
+
+  padding: 12px 14px;
+
+  transition: all 0.2s ease;
+}
+
+.settings-item:hover {
+  border-color: #41b883;
+  box-shadow: 0 0 14px rgba(65, 184, 131, 0.18);
+}
+
+.settings-item.active {
+  background: rgba(65, 184, 131, 0.08);
+  border-color: #41b883;
+}
+
+.checkbox-ui {
+  border: 2px solid #334155;
+}
+
+.settings-item.active .checkbox-ui {
+  background: #41b883;
+  border-color: #41b883;
+}

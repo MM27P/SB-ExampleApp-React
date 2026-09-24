@@ -1,0 +1,66 @@
+/* ===== MAIN WRAPPER ===== */
+
+.message-ticker {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 18px 22px;
+
+  background: linear-gradient(135deg, #0b1120, #0a0f1c);
+
+  border: 1px solid #1e293b;
+
+  border-radius: 18px;
+
+  box-shadow: 0 0 18px rgba(97, 218, 251, 0.08),
+    inset 0 0 24px rgba(0, 0, 0, 0.6);
+
+  white-space: nowrap;
+}
+
+/* ===== REACT SYMBOL (FIXED SPACE) ===== */
+
+.react-symbol {
+  color: #61dafb;
+
+  font-size: 24px;
+
+  width: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-shadow: 0 0 10px rgba(103, 136, 145, 0.25);
+}
+
+/* ===== MESSAGE SLOT (IMPORTANT FIX) ===== */
+
+.message-text {
+  font-size: 22px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: #384c85; /* 🔵 dark blue */
+
+  text-shadow: 0 0 6px rgba(17, 23, 44, 0.25);
+
+  min-width: 350px; /* 🔥 THIS prevents movement */
+
+  text-align: center;
+
+  display: inline-block;
+
+  white-space: nowrap;
+}

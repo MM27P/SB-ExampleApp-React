@@ -1,0 +1,118 @@
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===== MAIN LAYOUT ===== */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ===== TOP SECTION ===== */
+
+.top-section {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+/* ===== LEFT PANEL ===== */
+
+.left-panel {
+  flex: 1;
+
+  background: #111827;
+
+  border: 1px solid rgba(65, 184, 131, 0.18);
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  box-shadow: 0 0 22px rgba(65, 184, 131, 0.08);
+}
+
+/* ===== RIGHT PANEL ===== */
+
+.right-panel {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+
+.react-card {
+  background: #111827;
+
+  border: 1px solid rgba(65, 184, 131, 0.18);
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 0 0 22px rgba(65, 184, 131, 0.08);
+}
+
+/* ===== BUTTONS (GLOBAL) ===== */
+
+button {
+  background: linear-gradient(135deg, #41b883, #2f9e6d);
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 18px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(65, 184, 131, 0.35);
+}
+
+/* ===== INPUTS ===== */
+
+input,
+select {
+  width: 100%;
+
+  background: #1f2937;
+  border: 1px solid #334155;
+
+  color: white;
+
+  padding: 12px;
+  border-radius: 12px;
+
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #41b883;
+  box-shadow: 0 0 10px rgba(65, 184, 131, 0.3);
+}

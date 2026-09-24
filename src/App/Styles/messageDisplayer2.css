@@ -1,0 +1,93 @@
+/* ===== MAIN WRAPPER ===== */
+
+.message-ticker {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 18px 22px;
+
+  background: linear-gradient(135deg, #0f172a, #111827);
+
+  border: 1px solid rgba(221, 0, 49, 0.16);
+
+  border-radius: 18px;
+
+  box-shadow: 0 0 18px rgba(221, 0, 49, 0.08), inset 0 0 24px rgba(0, 0, 0, 0.6);
+
+  white-space: nowrap;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ===== ANGULAR GLOW ===== */
+
+.message-ticker::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(135deg, rgba(221, 0, 49, 0.06), transparent 45%);
+
+  pointer-events: none;
+}
+
+/* ===== ANGULAR SYMBOL (FIXED SPACE) ===== */
+
+.react-symbol {
+  color: #ff5c7a;
+
+  font-size: 24px;
+
+  width: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-shadow: 0 0 12px rgba(221, 0, 49, 0.28);
+
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+.message-ticker:hover .react-symbol {
+  transform: rotate(-12deg) scale(1.08);
+
+  text-shadow: 0 0 18px rgba(221, 0, 49, 0.42);
+}
+
+/* ===== MESSAGE SLOT ===== */
+
+.message-text {
+  font-size: 22px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: #ff6b81;
+
+  text-shadow: 0 0 8px rgba(221, 0, 49, 0.22);
+
+  min-width: 350px;
+
+  text-align: center;
+
+  display: inline-block;
+
+  white-space: nowrap;
+}

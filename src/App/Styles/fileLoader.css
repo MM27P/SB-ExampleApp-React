@@ -1,0 +1,277 @@
+/* ===== CARD ===== */
+
+.file-loader-card {
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.08);
+}
+
+.file-loader-card .header-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(97, 218, 251, 0.4),
+    transparent
+  );
+  margin: 10px 0;
+  opacity: 0.8;
+}
+
+.settings-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(97, 218, 251, 0.18),
+    rgba(56, 189, 248, 0.08)
+  );
+
+  border: 1px solid rgba(97, 218, 251, 0.22);
+
+  color: #61dafb;
+
+  font-size: 24px;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 0 18px rgba(97, 218, 251, 0.16),
+    inset 0 0 12px rgba(97, 218, 251, 0.08);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.file-loader-card:hover .settings-icon {
+  transform: rotate(18deg) scale(1.06);
+
+  border-color: rgba(97, 218, 251, 0.45);
+
+  box-shadow: 0 0 24px rgba(97, 218, 251, 0.28),
+    inset 0 0 18px rgba(97, 218, 251, 0.12);
+}
+
+/* ===== HEADER ===== */
+
+.file-loader-header {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #61dafb;
+
+  font-weight: 800;
+
+  font-size: 16px;
+}
+.file-loader-header h2 {
+  margin: 10;
+
+  color: #61dafb;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  line-height: 1.1;
+}
+/* ===== FILE INPUT ===== */
+
+.file-input {
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  color: #94a3b8;
+}
+
+/* ===== JSON VIEWER ===== */
+
+.json-viewer {
+  background: #0b1120;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  max-height: 260px;
+
+  overflow: auto;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  font-size: 12px;
+
+  color: #cbd5f5;
+
+  line-height: 1.5;
+}
+
+/* scrollbar */
+.json-viewer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.json-viewer::-webkit-scrollbar-thumb {
+  background: rgba(97, 218, 251, 0.3);
+
+  border-radius: 10px;
+}
+
+/* ===== ACTIONS ===== */
+
+.file-loader-actions {
+  display: flex;
+
+  gap: 12px;
+
+  justify-content: flex-end;
+}
+
+/* ===== BUTTONS ===== */
+
+.primary-btn {
+  background: linear-gradient(135deg, #61dafb, #38bdf8);
+
+  border: none;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  color: #0b1120;
+
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 14px rgba(97, 218, 251, 0.35);
+}
+
+.secondary-btn {
+  background: transparent;
+
+  border: 1px solid #334155;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  color: #94a3b8;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.secondary-btn:hover {
+  border-color: #61dafb;
+
+  color: #61dafb;
+}
+
+/* ===== HIDDEN INPUT ===== */
+
+.file-hidden-input {
+  display: none;
+}
+
+/* ===== BROWSE BUTTON ===== */
+
+.browse-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  color: #61dafb;
+
+  background: rgba(97, 218, 251, 0.08);
+
+  border: 1px solid rgba(97, 218, 251, 0.35);
+
+  transition: all 0.2s ease;
+
+  letter-spacing: 0.5px;
+}
+
+/* ===== HOVER ===== */
+
+.browse-btn:hover {
+  transform: translateY(-2px);
+
+  background: rgba(97, 218, 251, 0.15);
+
+  border-color: #61dafb;
+
+  box-shadow: 0 0 14px rgba(97, 218, 251, 0.25);
+}
+
+/* ===== ACTIVE CLICK ===== */
+
+.browse-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== ICON ===== */
+
+.browse-icon {
+  color: #61dafb;
+
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

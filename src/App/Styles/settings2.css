@@ -1,0 +1,151 @@
+/* ===== SETTINGS CARD ===== */
+
+.settings-box {
+  background: #111827;
+
+  border: 1px solid rgba(221, 0, 49, 0.16);
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  box-shadow: 0 0 20px rgba(221, 0, 49, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* ===== HEADER ===== */
+
+.settings-header {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 14px;
+}
+
+.settings-header h3 {
+  margin: 0;
+
+  color: #ff5c7a;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.settings-icon {
+  color: #ff5c7a;
+
+  font-size: 18px;
+}
+
+/* ===== LIST ===== */
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* ===== ITEM ===== */
+
+.settings-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  border-radius: 14px;
+
+  background: #0f172a;
+
+  border: 1px solid #374151;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* HOVER */
+
+.settings-item:hover {
+  border-color: #dd0031;
+
+  transform: translateX(4px);
+
+  background: #162033;
+
+  box-shadow: 0 0 14px rgba(221, 0, 49, 0.15);
+}
+
+/* ACTIVE */
+
+.settings-item.active {
+  background: rgba(221, 0, 49, 0.08);
+
+  border-color: #dd0031;
+
+  box-shadow: 0 0 18px rgba(221, 0, 49, 0.2);
+}
+
+/* ===== HIDE DEFAULT CHECKBOX ===== */
+
+.settings-item input {
+  display: none;
+}
+
+/* ===== CUSTOM CHECKBOX ===== */
+
+.checkbox-ui {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 6px;
+
+  border: 2px solid #475569;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+
+  position: relative;
+}
+
+/* CHECKED STATE */
+
+.settings-item.active .checkbox-ui {
+  background: #dd0031;
+
+  border-color: #dd0031;
+
+  box-shadow: 0 0 10px rgba(221, 0, 49, 0.35);
+}
+
+.settings-item.active .checkbox-ui::after {
+  content: '⚛';
+
+  font-size: 10px;
+
+  color: #ffffff;
+
+  font-weight: bold;
+}
+
+/* LABEL */
+
+.checkbox-label {
+  color: #f8fafc;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}

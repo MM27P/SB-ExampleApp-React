@@ -1,0 +1,93 @@
+/* ===== HEADER ===== */
+
+.app-header {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #111827, #0f172a);
+
+  border: 1px solid rgba(65, 184, 131, 0.2);
+
+  border-radius: 28px;
+
+  padding: 28px 34px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 0 24px rgba(65, 184, 131, 0.08);
+}
+
+/* ===== GLOW ===== */
+
+.header-glow {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(65, 184, 131, 0.18);
+
+  filter: blur(80px);
+}
+
+/* ===== ICON ===== */
+
+.header-react-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(65, 184, 131, 0.12);
+
+  border: 1px solid rgba(65, 184, 131, 0.35);
+
+  color: #41b883;
+
+  font-size: 38px;
+
+  box-shadow: 0 0 24px rgba(65, 184, 131, 0.18);
+
+  transition: all 0.25s ease;
+}
+
+.app-header:hover .header-react-icon {
+  transform: rotate(10deg) scale(1.08);
+
+  box-shadow: 0 0 34px rgba(65, 184, 131, 0.28);
+}
+
+/* ===== TITLE ===== */
+
+.header-text h1 {
+  margin: 0;
+
+  font-size: 38px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(135deg, #41b883, #2f9e6d, #7ee6b8);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 18px rgba(65, 184, 131, 0.18);
+}
+
+/* ===== SUBTITLE ===== */
+
+.header-text p {
+  margin: 0;
+
+  color: #41b883;
+  font-weight: 600;
+}

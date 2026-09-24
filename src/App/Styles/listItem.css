@@ -1,0 +1,186 @@
+/* ===== LIST WRAPPER ===== */
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  max-height: 100%;
+
+  overflow-y: hidden;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scrollbar (Chrome, Safari) */
+.items-list::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* ===== LIST ROW ===== */
+
+.list-row {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 18px;
+
+  padding: 16px 18px;
+
+  cursor: pointer;
+
+  transition: all 0.22s ease;
+
+  position: relative;
+
+  overflow: hidden;
+  width: 92%;
+}
+
+/* ===== REACT GLOW EFFECT ===== */
+
+.list-row::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(90deg, rgba(97, 218, 251, 0.06), transparent);
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+/* ===== HOVER ===== */
+
+.list-row:hover {
+  transform: translateX(6px);
+
+  border-color: #61dafb;
+
+  background: #162033;
+
+  box-shadow: 0 0 14px rgba(97, 218, 251, 0.16),
+    0 0 24px rgba(97, 218, 251, 0.08);
+}
+
+.list-row:hover::before {
+  opacity: 1;
+}
+
+/* ===== SELECTED ===== */
+
+.list-row.selected {
+  border-color: #61dafb;
+
+  background: linear-gradient(
+    90deg,
+    rgba(97, 218, 251, 0.18),
+    rgba(56, 189, 248, 0.06)
+  );
+
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.28),
+    inset 0 0 20px rgba(97, 218, 251, 0.08);
+}
+
+/* ===== SELECTED LEFT BAR ===== */
+
+.list-row.selected::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: #61dafb;
+
+  box-shadow: 0 0 12px #61dafb;
+}
+
+/* ===== REACT SYMBOL ===== */
+
+.react-list-icon {
+  color: #61dafb;
+
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+
+  transition: transform 0.2s ease;
+}
+
+.list-row:hover .react-list-icon {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* ===== ITEM NAME ===== */
+
+.list-item-name {
+  flex: 1;
+
+  text-align: left;
+
+  color: #f8fafc;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-left: 2px;
+}
+
+/* ===== VALUE ===== */
+
+.list-item-value {
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  margin-right: 10px;
+}
+
+/* ===== SELECTED BADGE ===== */
+
+.selected-badge {
+  background: rgba(97, 218, 251, 0.15);
+
+  border: 1px solid rgba(97, 218, 251, 0.35);
+
+  color: #61dafb;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+.row-action-slot {
+  width: 90px; /* reserve space */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+}

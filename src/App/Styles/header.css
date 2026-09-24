@@ -1,0 +1,162 @@
+/* ===== HEADER ===== */
+
+.app-header {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #111827, #0f172a);
+
+  border: 1px solid #1e293b;
+
+  border-radius: 28px;
+
+  padding: 28px 34px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 0 24px rgba(97, 218, 251, 0.08);
+}
+
+/* ===== GLOW ===== */
+
+.header-glow {
+  position: absolute;
+
+  top: -120px;
+  right: -120px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(97, 218, 251, 0.12);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+/* ===== CONTENT ===== */
+
+.header-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+/* ===== REACT ICON ===== */
+
+.header-react-icon {
+  width: 72px;
+  height: 72px;
+
+  min-width: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(97, 218, 251, 0.12);
+
+  border: 1px solid rgba(97, 218, 251, 0.28);
+
+  color: #61dafb;
+
+  font-size: 38px;
+
+  box-shadow: 0 0 24px rgba(97, 218, 251, 0.18);
+
+  transition: all 0.25s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+.app-header:hover .header-react-icon {
+  transform: rotate(18deg) scale(1.08);
+
+  box-shadow: 0 0 34px rgba(97, 218, 251, 0.28);
+}
+
+/* ===== TEXT ===== */
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== TITLE ===== */
+
+.header-text h1 {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 38px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #61dafb 0%,
+    #38bdf8 35%,
+    #7dd3fc 70%,
+    #61dafb 100%
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: reactGlow 5s linear infinite;
+
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.25),
+    0 0 22px rgba(97, 218, 251, 0.12);
+}
+
+/* ===== SUBTITLE ===== */
+
+.header-text p {
+  margin: 0;
+
+  color: #61dafb;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  opacity: 0.9;
+
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.18);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes reactGlow {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}

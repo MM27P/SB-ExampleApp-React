@@ -1,0 +1,163 @@
+/* ===== HEADER ===== */
+
+.app-header {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #111827, #0f172a);
+
+  border: 1px solid rgba(221, 0, 49, 0.18);
+
+  border-radius: 28px;
+
+  padding: 28px 34px;
+
+  margin-bottom: 10px;
+
+  box-shadow: 0 0 24px rgba(221, 0, 49, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* ===== GLOW ===== */
+
+.header-glow {
+  position: absolute;
+
+  top: -120px;
+  right: -120px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(221, 0, 49, 0.14);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+/* ===== CONTENT ===== */
+
+.header-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+/* ===== ANGULAR ICON ===== */
+
+.header-react-icon {
+  width: 72px;
+  height: 72px;
+
+  min-width: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(221, 0, 49, 0.12);
+
+  border: 1px solid rgba(221, 0, 49, 0.32);
+
+  color: #ff4d6d;
+
+  font-size: 38px;
+
+  box-shadow: 0 0 24px rgba(221, 0, 49, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition: all 0.25s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+.app-header:hover .header-react-icon {
+  transform: rotate(-10deg) scale(1.08);
+
+  box-shadow: 0 0 36px rgba(221, 0, 49, 0.32), 0 0 64px rgba(221, 0, 49, 0.12);
+}
+
+/* ===== TEXT ===== */
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== TITLE ===== */
+
+.header-text h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b81 0%,
+    #dd0031 35%,
+    #ff4d6d 70%,
+    #ff8fa3 100%
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: reactGlow 5s linear infinite;
+
+  text-shadow: 0 0 10px rgba(221, 0, 49, 0.25), 0 0 22px rgba(221, 0, 49, 0.12);
+}
+
+/* ===== SUBTITLE ===== */
+
+.header-text p {
+  margin: 0;
+
+  color: #ff6b81;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  opacity: 0.9;
+
+  text-shadow: 0 0 10px rgba(221, 0, 49, 0.18);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes reactGlow {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}

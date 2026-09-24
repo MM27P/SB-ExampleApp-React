@@ -1,0 +1,54 @@
+/* ===== BUTTON PANEL ===== */
+
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.react-button {
+  width: 100%;
+
+  background: linear-gradient(135deg, #41b883 0%, #2f9e6d 100%);
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 14px 18px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+
+  box-shadow: 0 4px 12px rgba(65, 184, 131, 0.18);
+}
+
+.react-button:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #4dd49a 0%, #41b883 100%);
+
+  box-shadow: 0 0 16px rgba(65, 184, 131, 0.35),
+    0 0 26px rgba(65, 184, 131, 0.15);
+}
+
+.react-button:active {
+  transform: scale(0.98);
+}
+
+.react-button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+.react-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

@@ -1,0 +1,77 @@
+/* ===== FILE LOADER CARD ===== */
+
+.file-loader-card {
+  background: #111827;
+
+  border: 1px solid rgba(65, 184, 131, 0.18);
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  box-shadow: 0 0 20px rgba(65, 184, 131, 0.08);
+}
+
+/* HEADER */
+
+.file-loader-header {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #41b883;
+  font-weight: 800;
+}
+
+/* INPUT */
+
+.file-input {
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  color: #94a3b8;
+}
+
+/* JSON */
+
+.json-viewer {
+  background: #0b1120;
+
+  border: 1px solid rgba(65, 184, 131, 0.18);
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  max-height: 260px;
+
+  overflow: auto;
+
+  color: #e2e8f0;
+}
+
+/* PRIMARY BUTTON */
+
+.primary-btn {
+  background: linear-gradient(135deg, #41b883, #2f9e6d);
+  color: white;
+
+  border-radius: 12px;
+
+  padding: 10px 14px;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 0 16px rgba(65, 184, 131, 0.35);
+}

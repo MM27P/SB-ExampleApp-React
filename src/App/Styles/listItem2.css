@@ -1,0 +1,196 @@
+/* ===== LIST WRAPPER ===== */
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  max-height: 100%;
+
+  overflow-y: hidden;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scrollbar (Chrome, Safari) */
+
+.items-list::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* ===== LIST ROW ===== */
+
+.list-row {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  background: #111827;
+
+  border: 1px solid rgba(221, 0, 49, 0.14);
+
+  border-radius: 18px;
+
+  padding: 16px 18px;
+
+  cursor: pointer;
+
+  transition: all 0.22s ease;
+
+  position: relative;
+
+  overflow: hidden;
+
+  width: 92%;
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* ===== ANGULAR GLOW EFFECT ===== */
+
+.list-row::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(90deg, rgba(221, 0, 49, 0.06), transparent);
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+/* ===== HOVER ===== */
+
+.list-row:hover {
+  transform: translateX(6px);
+
+  border-color: #dd0031;
+
+  background: #162033;
+
+  box-shadow: 0 0 16px rgba(221, 0, 49, 0.16), 0 0 28px rgba(221, 0, 49, 0.08);
+}
+
+.list-row:hover::before {
+  opacity: 1;
+}
+
+/* ===== SELECTED ===== */
+
+.list-row.selected {
+  border-color: #dd0031;
+
+  background: linear-gradient(
+    90deg,
+    rgba(221, 0, 49, 0.18),
+    rgba(255, 77, 109, 0.06)
+  );
+
+  box-shadow: 0 0 20px rgba(221, 0, 49, 0.28),
+    inset 0 0 20px rgba(221, 0, 49, 0.08);
+}
+
+/* ===== SELECTED LEFT BAR ===== */
+
+.list-row.selected::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: #ff4d6d;
+
+  box-shadow: 0 0 14px rgba(221, 0, 49, 0.8);
+}
+
+/* ===== ANGULAR SYMBOL ===== */
+
+.react-list-icon {
+  color: #ff5c7a;
+
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+
+  transition: transform 0.2s ease;
+}
+
+.list-row:hover .react-list-icon {
+  transform: rotate(-16deg) scale(1.1);
+}
+
+/* ===== ITEM NAME ===== */
+
+.list-item-name {
+  flex: 1;
+
+  text-align: left;
+
+  color: #f8fafc;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-left: 2px;
+}
+
+/* ===== VALUE ===== */
+
+.list-item-value {
+  color: #cbd5e1;
+
+  font-size: 14px;
+
+  margin-right: 10px;
+}
+
+/* ===== SELECTED BADGE ===== */
+
+.selected-badge {
+  background: rgba(221, 0, 49, 0.14);
+
+  border: 1px solid rgba(221, 0, 49, 0.35);
+
+  color: #ff6b81;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  box-shadow: 0 0 12px rgba(221, 0, 49, 0.12);
+}
+
+.row-action-slot {
+  width: 90px; /* reserve space */
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  flex-shrink: 0;
+}
