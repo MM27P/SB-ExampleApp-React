@@ -159,7 +159,7 @@ function App({ items }: { items: Item[] }) {
         </div>
         <div className="section-divider" />
         <MessageDisplayer
-          messages={['ANGULAR SUCKS', 'REACT RULEZ', 'ONLY TYPESCRIPT']}
+          messages={['REACT', 'ANGULAR', 'VUE']}
           time={3}
         />
         <div className="section-divider" />

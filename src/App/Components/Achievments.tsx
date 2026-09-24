@@ -24,7 +24,6 @@ export const Achievments = () => {
       <label>*Counter- background task[X]</label>
       <label>*Call async api[X]</label>
       <label>*Dodanie popapów[]</label>
-      <label>*Dodanie migajacęgo tekstu Angular ssie, React RULEZ []</label>
       <label>*Poprawa stylowania []</label>
       <label>*Dodanie lepszej walidacji []</label>
     </div>
